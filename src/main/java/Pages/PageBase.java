@@ -1,3 +1,5 @@
+package Pages;
+
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
@@ -28,6 +30,7 @@ public class PageBase {
     {
         waitElementVisibility(element);
         element.click();
+
     }
     public void fillTxtField(MobileElement element, String txt)
     {

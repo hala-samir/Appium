@@ -1,0 +1,17 @@
+/.metadata/
+.classpath
+.idea/codeStyles/
+.idea/inspectionProfiles/
+.idea/modifysf.iml
+.idea/modules.xml
+.idea/typescript-compiler.xml
+.idea/workspace.xml
+.mvn/
+.project
+.settings/
+README.md
+/src/main/main.iml
+/.idea/misc.xml
+/.idea/libraries
+.idea
+target/

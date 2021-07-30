@@ -1,12 +1,19 @@
+package Pages;
+
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
+import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class AddTask extends PageBase {
+public class AddTaskPage extends PageBase {
 
-    public AddTask(AppiumDriver appiumDriver) {
+    public AddTaskPage(AppiumDriver appiumDriver) {
         super(appiumDriver);
     }
+   // MobileElement rateLater;
+
     @AndroidFindBy(id = "editTextTitre")
     MobileElement taskTitle;
 
@@ -29,13 +36,10 @@ public class AddTask extends PageBase {
         fillTxtField(noteText, notes);
     }
 
-    public void enterTag(String tagname){
-
-        fillTxtField(tag, tagname);
-    }
-
     public void clickSaveBtn(){
+
         clickBtn(saveBtn);
     }
+
 
 }
