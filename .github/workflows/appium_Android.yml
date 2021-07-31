@@ -6,7 +6,7 @@ name: appiumAndroid
 on:
   schedule:
     # * is a special character in YAML so you have to quote this string
-    - cron:  '18 16,14 * * *'
+    - cron:  '30 17,16 * * *'
 
 jobs:
   build:
