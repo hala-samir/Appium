@@ -4,8 +4,9 @@
 name: appiumAndroid
 
 on:
-  pull_request:
-    branches: [ pageObjectModel ]
+  schedule:
+    # * is a special character in YAML so you have to quote this string
+    - cron:  '20 16,14 * * *'
 
 jobs:
   build:
