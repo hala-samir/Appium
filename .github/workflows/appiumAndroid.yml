@@ -10,8 +10,8 @@ on:
 jobs:
   build:
     runs-on: windows-latest
-     strategy:
-       matrix:
+    strategy:
+      matrix:
         api-level: [27]  
         target: [default]
 
