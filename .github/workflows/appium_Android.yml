@@ -10,12 +10,11 @@ on:
 
 jobs:
   build:
-    runs-on: macOS-latest
+    runs-on: macos-latest
     strategy:
       matrix:
-        api-level: [27]  
+        api-level: [25]  
         target: [default]
-
     steps:
     - uses: actions/checkout@v2
     - name: Set up JDK 1.8
@@ -24,16 +23,16 @@ jobs:
         java-version: 1.8
     - uses: actions/setup-node@v2
       with:
-       node-version: '12.3.1'     
+       node-version: '12'
     - run: |
-            npm install -g appium@v1.21.0
+            npm install -g appium@v1.20.2
             appium -v
             appium &>/dev/null &
-    - name: Build with Maven
+    - name: Run Appium Tests
       uses: reactivecircus/android-emulator-runner@v1
       with:
         api-level: ${{ matrix.api-level }}
         target: ${{ matrix.target }}
         arch: x86_64
-        profile: Pixel XL API 27
+        profile: Nexus 6
         script: mvn clean test -Pandroid
